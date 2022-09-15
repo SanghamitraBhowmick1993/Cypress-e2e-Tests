@@ -1,26 +1,26 @@
-class CatalogProductSearch{
+class CatalogProductSearch {
 
-    catalog(value){
+    catalog(value) {
         cy.get("[class='brand-image-xs logo-xs']").click()
-        const field =  cy.get("[placeholder='Search']")
+        const field = cy.get("[placeholder='Search']")
         field.type(value)
         return this
     }
-    selectProduct(){
+    selectProduct() {
         cy.get("[id='user-selection']:nth-of-type(1)").click()
     }
-    lookupProduct(){
+    lookupProduct() {
         cy.get("[href='/Admin/Product/List']").click()
     }
-    enterProductNameToSearch(value){
+    enterProductNameToSearch(value) {
         const field = cy.get('[id=SearchProductName]')
         field.clear()
         field.type(value)
         return this
     }
-    search(){
+    search() {
         cy.get('[id=search-products]').click()
-  
+
     }
 
 }
